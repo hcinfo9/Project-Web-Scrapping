@@ -1,0 +1,14 @@
+# Desconsiderar arquivos gerados pelo compilador
+bin/
+obj/
+
+# Desconsiderar arquivos de configuração local
+appsettings.Development.json
+
+# Desconsiderar arquivos de banco de dados
+*.mdf
+*.sqlite
+
+# Desconsiderar arquivos temporários
+*.suo
+*.user
