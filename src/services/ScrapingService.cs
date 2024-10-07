@@ -15,10 +15,8 @@ namespace Scraping.Services
             _foodService = foodService;
         }
 
-        /// <summary>
-        /// Realiza o scraping dos dados de alimentos e componentes.
-        /// </summary>
-        /// <param name="url">URL da página a ser raspada.</param>
+
+        //Realiza o scraping dos dados de alimentos e componentes.
         public void ScrapeData(string url)
         {
             HtmlWeb web = new HtmlWeb();
@@ -75,11 +73,8 @@ namespace Scraping.Services
             }
         }
 
-        /// <summary>
-        /// Realiza o scraping dos componentes de um alimento específico.
-        /// </summary>
-        /// <param name="codigoAlimento">Código do alimento.</param>
-        /// <returns>Lista de componentes do alimento.</returns>
+
+        // Realiza o scraping dos componentes de um alimento específico.
         public List<FoodComponent> ScrapeComponents(string codigoAlimento)
         {
             var urlDetails = $"https://www.tbca.net.br/base-dados/int_composicao_estatistica.php?cod_produto={codigoAlimento}";

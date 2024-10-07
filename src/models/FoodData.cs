@@ -1,8 +1,7 @@
 namespace foodData.Models
 {
-    /// <summary>
-    /// Representa os dados principais de um alimento.
-    /// </summary>
+
+    //Representa os dados principais de um alimento.
     public class FoodData
     {
         public string? Codigo { get; set; }

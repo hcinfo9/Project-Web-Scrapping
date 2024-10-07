@@ -1,8 +1,7 @@
 namespace foodComponent.Models
 {
-    /// <summary>
-    /// Representa um componente nutricional de um alimento.
-    /// </summary>
+
+    //Representa um componente nutricional de um alimento.
     public class FoodComponent
     {
         public string? CodigoAlimento { get; set; }
