@@ -84,14 +84,16 @@ namespace FoodRepo.Repositories
                 {
                     // Verifica se o componente já existe na tabela para o alimento
                     const string checkQuery = @"
-                    SELECT COUNT(1) 
-                    FROM food_components 
-                    WHERE codigo_alimento = @CodigoAlimento AND componente = @Componente";
+                        SELECT COUNT(1) 
+                        FROM food_components 
+                        WHERE codigo_alimento = @CodigoAlimento AND componente = @Componente AND unidade = @Unidade;";
 
-                    int exists = dbConnection.QuerySingle<int>(checkQuery, new
+
+                    int exists = dbConnection.QuerySingleOrDefault<int>(checkQuery, new
                     {
-                        CodigoAlimento = component.CodigoAlimento,
-                        Componente = component.Componente
+                        codigoAlimento = component.CodigoAlimento,
+                        componente = component.Componente,
+                        unidade = component.Unidade
                     });
 
                     // Se o componente já existe, pular a inserção
